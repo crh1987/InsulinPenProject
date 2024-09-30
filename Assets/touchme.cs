@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class touchme : MonoBehaviour
 {
+    public Light light1;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,20 @@ public class touchme : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "RightIndex")
+        {
+            if (light1.enabled == false)
+            {
+                light1.enabled = true;
+            }
+            else
+            {
+                light1.enabled = true;
+            }
+        }
     }
 }
